@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganga Institute Chill Cafe</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header { background-color: #2c3e50; color: #ecf0f1; padding: 30px; }
+        h1 { margin: 0; font-size: 40px; }
+        .content { padding: 30px; }
+        p { font-size: 20px; color: #555; }
+        button { background-color: blue; color: white; border: none; padding: 15px 30px; font-size: 20px; cursor: pointer; border-radius: 8px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        button:hover { background-color: darkblue; transform: scale(1.05); }
+
+        .cafe-hero-image { max-width: 80%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 30px; }
+        
+        .menu-section { background-color: white; padding: 40px 20px; margin-top: 40px; display: none; }
+        .menu-item { display: flex; justify-content: space-between; max-width: 500px; margin: 10px auto; border-bottom: 1px dashed #ccc; padding: 10px 0; font-size: 18px; }
+        .price { font-weight: bold; color: #e74c3c; }
+
+        .booking-section { background-color: #e8f4f8; padding: 40px 20px; margin-top: 40px; }
+        form { max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        input, textarea { padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; }
+
+        footer { background-color: #333; color: white; padding: 20px; margin-top: 40px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ganga Institute Chill Cafe ☕</h1>
+        <p>Best Coffee, Fast Wi-Fi & Great Vibes!</p>
+    </header>
+
+    <div class="content">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop" alt="Cozy Cafe Scene" class="cafe-hero-image">
+        <h2>Welcome to your new hangout spot</h2>
+        <p>Freshly brewed coffee, tasty snacks, aur doston ke saath gupshup.</p>
+        <button onclick="document.getElementById('menu').style.display='block'; this.style.display='none';">Explore Menu</button>
+    </div>
+
+    <div id="menu" class="menu-section">
+        <h2>Our Bestsellers 🔥</h2>
+        <div class="menu-item"><span>Cold Coffee with Ice Cream</span><span class="price">₹120</span></div>
+        <div class="menu-item"><span>Masala Maggi</span><span class="price">₹60</span></div>
+        <div class="menu-item"><span>Cheese Grilled Sandwich</span><span class="price">₹90</span></div>
+        <div class="menu-item"><span>Paneer Tikka Pizza</span><span class="price">₹199</span></div>
+    </div>
+
+    <div class="booking-section">
+        <h2>Book Your Table 📅</h2>
+        <p>Aane se pehle apni seat pakki karein!</p>
+        
+       <form name="cafe-new-booking" method="POST" data-netlify="true" action="success.html">
+    <input type="hidden" name="form-name" value="cafe-new-booking" />
+    
+    <input type="text" name="name" placeholder="Aapka Naam" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" placeholder="Kitne dost aa rahe hain?" rows="3" required></textarea>
+    <button type="submit">Confirm Booking</button>
+</form>
+    </div>
+
+    <footer>
+        <p>📍 Near Ganga Institute Main Gate | 📞 +91 98765 43210</p>
+        <p>© 2026 Ganga Institute Chill Cafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
